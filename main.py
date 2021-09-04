@@ -16,4 +16,6 @@ def run():
 
 
 if __name__ == '__main__':
-    schedule.every(3).hours.do(run())
+    schedule.every(3).hours.do(run).run()
+    while True:
+        schedule.run_pending()

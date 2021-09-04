@@ -20,8 +20,10 @@ def run():
     func = lambda a: a.text
     res = zip(map(func, title_list), map(func, price_list), map(func, start_list))
     final_text = ''
-    for item in list(res)[:8]:
-        line = '价格:' + item[1] + '。' + '名称:' + item[0] + '。' + '认为值的人数:' + item[2] + '。'
-        print(line)
-        final_text = final_text + line
+    for item in res:
+        # 修改此处，过滤认为值的人数
+        if int(item[2]) > 40:
+            line = '价格:' + item[1] + '。' + '名称:' + item[0] + '。' + '认为值的人数:' + item[2] + '。'
+            print(line)
+            final_text = final_text + line
     return final_text

@@ -7,5 +7,6 @@ API_KEY = '此处改成你自己的API_KEY'
 SECRET_KEY = '此处改成你自己的SECRET_KEY'
 MP3_PATH = '此处改成你希望mp3文件存储的本地目录'`
 
-step2: 修改这行代码，已你希望的时间间隔运行程序
-`schedule.every(3).hours.do(run)`
+step2: 修改这行代码，以你希望的时间间隔运行程序
+`    schedule.every(3).hours.do(run).run()
+`
